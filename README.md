@@ -30,8 +30,9 @@
 
 - uuid
 
-  Сслылка на проект:
-  [TODOLIST] ()
+  Сслылки на проект:
+  Ссылка на GitHub: https://github.com/Otteliya2035/TODO
+  Ссылка на демо проекта: https://todo-beta-gilt.vercel.app/
 
 ### Планы по улучшению:
 
