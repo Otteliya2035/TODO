@@ -1,0 +1,143 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 92px;
+  color: #716e6e;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: lighter;
+}
+.container{
+  position: relative;
+  width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+.container::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 98%;
+  height: 10px;
+  background-color: #fff;
+  left: 1%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 96%;
+  height: 10px;
+  background-color: #fff;
+  left: 2%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+.checkbox {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #c9ccc9;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 30px;
+  margin-left: 10px;
+  align-self: center;
+}
+.checkbox::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  width: 5px;
+  height: 15px;
+  border: 2px solid #00ff00;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.checkbox:checked::after {
+  opacity: 1;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  border-bottom: 1px solid rgb(77, 75, 75);
+}
+
+.task__title{
+  vertical-align: middle;
+  margin: 0;
+  font-size: 20px;
+}
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.button__container button {
+  margin: 0 15px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.button__container button.active__filter {
+  border: 1px solid #767272;
+  box-shadow: 0px 0px 1px 1px rgba(128, 128, 128, 0.5);
+  border-radius: 5%;
+}
+
+.checkbox:checked + .task__title {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.input {
+  position: relative;
+  width: 800px;
+  min-height: 50px;
+  border: none;
+  border-bottom: 1px solid rgb(77, 75, 75);
+}
+
+.input::placeholder {
+  padding-left: 60px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>'); /* Изображение галочки в формате SVG в кодировке base64 */
+  background-size: 20px;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  font-size: 20px;
+  background-position-x: 20px;
+}
+
+
+
